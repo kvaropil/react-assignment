@@ -5,18 +5,15 @@ import styled from 'styled-components';
 const HeaderWrapper = styled.div`
   align-items: center;
   background-color: white;
+  border: 2px solid #f7f6f3;
   box-sizing: border-box;
   display: flex;
   height: 5rem;
   padding: 0.625rem;
   width: 100%;
-
-  /* border: 1px 1px 1px 1px solid #f7f6f3; */
-  border: 2px solid #f7f6f3;
 `;
 
 const Logo = styled.img`
-  /* height: 3rem; */
   padding-left: 5rem;
 `;
 
