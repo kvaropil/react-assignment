@@ -10,11 +10,11 @@ const Home = () => {
 };
 
 const PageWrapper = styled.div`
-  display: flex;
-  justify-content: center; // This will center the children horizontally
-  width: 100%;
   background-color: pink;
   border: 1px solid #f7f6f3;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `;
 
 export default Home;
