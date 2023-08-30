@@ -1,20 +1,23 @@
+import styled, { ThemeProvider } from 'styled-components';
+
 import { Header } from '../src/components/Header';
-import styled from 'styled-components';
+import { theme } from '../styles/theme';
 
 const Home = () => {
   return (
-    <PageWrapper>
-      <Header />
-    </PageWrapper>
+    <ThemeProvider theme={theme}>
+      <PageWrapper>
+        <Header />
+      </PageWrapper>
+    </ThemeProvider>
   );
 };
 
 const PageWrapper = styled.div`
-  background-color: pink;
-  border: 1px solid #f7f6f3;
   display: flex;
   justify-content: center;
   width: 100%;
+  background-color: pink;
 `;
 
 export default Home;
