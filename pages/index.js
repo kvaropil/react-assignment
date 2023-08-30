@@ -20,7 +20,7 @@ const PageWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  background-color: pink;
+  /* background-color: pink; */
 `;
 
 export default Home;

@@ -3,8 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderWrapper = styled.div`
-  background-color: ${(props) => props.theme.white};
-  border-bottom: 1px solid ${(props) => props.theme.beige};
+  background-color: ${(props) => props.theme.colors.white};
+  border-bottom: 1px solid ${(props) => props.theme.colors.beige};
   height: 80px;
   width: 100%;
 `;

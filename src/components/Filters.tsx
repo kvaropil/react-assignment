@@ -1,23 +1,18 @@
+import { PriceFilter } from './PriceFilter';
+import { PriceSlider } from './PriceSlider';
 import React from 'react';
 import styled from 'styled-components';
 
 const FiltersWrapper = styled.div`
+  border-bottom: 1px solid ${(props) => props.theme.colors.beige};
   display: flex;
   justify-content: space-between;
   width: 100%;
 `;
 
-const PriceSliderSection = styled.div`
-  flex: 4;
-  border-right: 2px solid #f7f6f3;
-  padding-right: 1rem;
-  display: flex;
-  align-items: center;
-`;
-
 const TypesSection = styled.div`
   flex: 5;
-  border-right: 2px solid #f7f6f3;
+  border-right: 1px solid ${(props) => props.theme.colors.beige};
   padding: 0 1rem;
   display: flex;
   align-items: center;
@@ -33,7 +28,7 @@ const ReservationSection = styled.div`
 export const Filters = () => {
   return (
     <FiltersWrapper>
-      <PriceSliderSection>PriceSliderSection</PriceSliderSection>
+      <PriceFilter />
       <TypesSection>TypesSection</TypesSection>
       <ReservationSection>ReservationSection</ReservationSection>
     </FiltersWrapper>
