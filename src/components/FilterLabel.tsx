@@ -6,6 +6,7 @@ const Label = styled.label`
   color: ${(props) => props.theme.colors.darkGrey};
   font-size: 16px;
   text-align: left;
+  padding-bottom: 16px;
 `;
 
 export const FilterLabel: React.FC<PriceLabelProps> = ({ children }) => {

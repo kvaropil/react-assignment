@@ -7,7 +7,6 @@ import styled from 'styled-components';
 const SliderContainer = styled.div`
   cursor: pointer;
   height: 24px;
-  margin-top: 37px;
   width: 100%;
 `;
 
