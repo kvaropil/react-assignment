@@ -1,7 +1,7 @@
-import { CaravanListItem } from './CaravanListItem';
+import { CaravanListItem } from './CaravanListItem/CaravanListItem';
 import React from 'react';
 import styled from 'styled-components';
-import { useCaravans } from '../hooks/caravans/useCaravans';
+import { useCaravans } from '../../hooks/caravans/useCaravans';
 
 const StyledCaravansList = styled.div`
   display: flex;

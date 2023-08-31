@@ -1,6 +1,6 @@
 import styled, { ThemeProvider } from 'styled-components';
 
-import { CaravansList } from '../src/components/CaravansList';
+import { CaravansList } from '../src/components/Caravan/CaravansList';
 import { Filters } from '../src/components/Filters';
 import { Header } from '../src/components/Header';
 import { Provider } from 'jotai';

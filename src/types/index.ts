@@ -33,3 +33,7 @@ export type Caravan = {
   shower: boolean;
   pictures: string[];
 };
+
+export type CaravaListItemProps = {
+  caravan: Caravan;
+};
