@@ -1,3 +1,4 @@
+import { DropdownFilter } from './common/DropdownFilter';
 import { FilterLabel } from './FilterLabel';
 import React from 'react';
 import actionIcon from '../assets/icons/actionFilter.svg';
@@ -11,14 +12,13 @@ const StyledInstantReservationFilterWrapper = styled.div`
   padding-top: 24px;
   padding-bottom: 24px;
   padding-right: 24px;
-  border-right: 1px solid ${(props) => props.theme.colors.beige};
 `;
 
 export const InstantReservationFilter: React.FC = () => {
   return (
     <StyledInstantReservationFilterWrapper>
       <FilterLabel iconSrc={actionIcon.src}>Okamžitá rezervace</FilterLabel>
-      <p>instantReservationFilter</p>
+      <DropdownFilter />
     </StyledInstantReservationFilterWrapper>
   );
 };
