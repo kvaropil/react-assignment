@@ -5,6 +5,7 @@ export type TrackProps = {
 
 export type PriceLabelProps = {
   children: React.ReactNode;
+  iconSrc?: string;
 };
 
 export type TextboxProps = {

@@ -1,3 +1,4 @@
+import { InstantReservationFilter } from './InstantReservationFilter';
 import { PriceFilter } from './PriceFilter';
 import React from 'react';
 import { TypeFilter } from './TypeFilter';
@@ -13,14 +14,14 @@ const FiltersWrapper = styled.div`
 const TypesSection = styled.div`
   flex: 5;
   border-right: 1px solid ${(props) => props.theme.colors.beige};
-  padding: 0 1rem;
   display: flex;
   align-items: center;
+  padding-left: 16px;
 `;
 
 const ReservationSection = styled.div`
   flex: 3;
-  padding-left: 1rem;
+  padding-left: 16px;
   display: flex;
   align-items: center;
 `;
@@ -32,7 +33,9 @@ export const Filters: React.FC = () => {
       <TypesSection>
         <TypeFilter />
       </TypesSection>
-      <ReservationSection>ReservationSection</ReservationSection>
+      <ReservationSection>
+        <InstantReservationFilter />
+      </ReservationSection>
     </FiltersWrapper>
   );
 };

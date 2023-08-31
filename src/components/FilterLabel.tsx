@@ -9,6 +9,20 @@ const Label = styled.label`
   padding-bottom: 16px;
 `;
 
-export const FilterLabel: React.FC<PriceLabelProps> = ({ children }) => {
-  return <Label>{children}</Label>;
+const StyledIcon = styled.img`
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+`;
+
+export const FilterLabel: React.FC<PriceLabelProps> = ({
+  children,
+  iconSrc,
+}) => {
+  return (
+    <Label>
+      {children}
+      {iconSrc ? <StyledIcon src={iconSrc} /> : null}
+    </Label>
+  );
 };
