@@ -10,3 +10,12 @@ export type PriceLabelProps = {
 export type TextboxProps = {
   value: number;
 };
+
+export type TypeFilterCardProps = {
+  heading: string;
+  text: string;
+};
+
+export type StyledTypeCardContainerProps = {
+  isSelected: boolean;
+};

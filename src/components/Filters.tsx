@@ -1,6 +1,6 @@
 import { PriceFilter } from './PriceFilter';
-import { PriceSlider } from './PriceSlider';
 import React from 'react';
+import { TypeFilter } from './TypeFilter';
 import styled from 'styled-components';
 
 const FiltersWrapper = styled.div`
@@ -25,11 +25,13 @@ const ReservationSection = styled.div`
   align-items: center;
 `;
 
-export const Filters = () => {
+export const Filters: React.FC = () => {
   return (
     <FiltersWrapper>
       <PriceFilter />
-      <TypesSection>TypesSection</TypesSection>
+      <TypesSection>
+        <TypeFilter />
+      </TypesSection>
       <ReservationSection>ReservationSection</ReservationSection>
     </FiltersWrapper>
   );
