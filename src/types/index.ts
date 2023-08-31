@@ -20,3 +20,16 @@ export type TypeFilterCardProps = {
 export type StyledTypeCardContainerProps = {
   isSelected: boolean;
 };
+
+export type Caravan = {
+  location: string;
+  instantBookable: boolean;
+  name: string;
+  passengersCapacity: number;
+  sleepCapacity: number;
+  price: number;
+  vehicleType: string;
+  toilet: boolean;
+  shower: boolean;
+  pictures: string[];
+};
