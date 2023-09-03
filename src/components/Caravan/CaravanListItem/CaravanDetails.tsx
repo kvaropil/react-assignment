@@ -7,20 +7,21 @@ import styled from 'styled-components';
 
 const StyledCaravanDetailsWrapper = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.beige};
-  margin-top: 5px;
+
   margin-bottom: 14px;
+  margin-top: 5px;
 `;
 
 const StyledCaravanEquipmentWrapper = styled.ul`
+  align-items: center;
   display: flex;
   list-style-type: none;
   padding: 0;
-  align-items: center;
 `;
 
 const StyledCaravanEquipmentItem = styled.li`
-  display: flex;
   align-items: center;
+  display: flex;
   margin-left: 14px;
 
   &:first-child {
@@ -29,13 +30,14 @@ const StyledCaravanEquipmentItem = styled.li`
 `;
 
 const StyledLocation = styled.h3`
+  color: ${(props) => props.theme.colors.darkBlue};
+
   font-size: 14px;
   font-weight: 200;
-  text-align: left;
   letter-spacing: 0px;
-  color: ${(props) => props.theme.colors.darkBlue};
   opacity: 1;
   padding: 3px 0 2px 0;
+  text-align: left;
 `;
 
 const StyledIcon = styled.img`
@@ -44,9 +46,10 @@ const StyledIcon = styled.img`
 `;
 
 const StyledIconAdditionalText = styled.span`
+  color: ${(props) => props.theme.colors.darkBlue};
+
   font-size: 14px;
   margin-left: 4px;
-  color: ${(props) => props.theme.colors.darkBlue};
 `;
 
 type CaravanDetailsProps = {

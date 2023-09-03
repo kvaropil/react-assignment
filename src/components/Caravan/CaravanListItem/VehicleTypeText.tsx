@@ -5,15 +5,14 @@ import { translateVehicleType } from '../../../utils/vehicleTypeTranslate';
 const StyledVehicleType = styled.span`
   color: ${(props) => props.theme.colors.orange};
 
-  /* font: normal normal bold 12px/12px Roboto; */
+  font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
+  margin: 0;
   opacity: 1;
+  padding: 2px 0;
   text-align: left;
   text-transform: uppercase;
-  padding: 2px 0;
-  margin: 0;
-  font-size: 12px;
 `;
 
 type VehicleTypeProps = {
