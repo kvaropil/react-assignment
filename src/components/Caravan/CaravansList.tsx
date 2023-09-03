@@ -1,7 +1,9 @@
 import { CaravanListItem } from './CaravanListItem/CaravanListItem';
 import React from 'react';
+import { Spinner } from '../common/Spinner';
 import styled from 'styled-components';
 import { useCaravans } from '../../hooks/caravans/useCaravans';
+import { useFetchingStatus } from '../../hooks/common/useFetchingState';
 import { useFilteredCaravans } from '../../hooks/caravans/useFilteredCaravans';
 
 const StyledCaravansList = styled.div`
@@ -13,15 +15,17 @@ const StyledCaravansList = styled.div`
 `;
 
 export const CaravansList: React.FC = () => {
-  useCaravans();
+  const { fetchingStatus } = useFetchingStatus();
+  const caravans = useCaravans();
 
   const filteredCaravans = useFilteredCaravans().slice(0, 6);
-  // since there is no ID on api response I've decided to use
-  // index as key
-  return (
+  return fetchingStatus.status === 'loading' ? (
+    <Spinner />
+  ) : (
     <StyledCaravansList>
-      {filteredCaravans.map((caravan, index) => {
-        return <CaravanListItem key={index} caravan={caravan} />;
+      {filteredCaravans.map((caravan) => {
+        // eslint-disable-next-line react/jsx-key
+        return <CaravanListItem caravan={caravan} />;
       })}
     </StyledCaravansList>
   );
