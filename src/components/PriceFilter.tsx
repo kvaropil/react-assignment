@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-
 import { FilterLabel } from './FilterLabel';
 import { PriceSlider } from './PriceSlider';
+import React from 'react';
 import { TextboxPrice } from './common/TextboxPrice';
+import { priceFilterAtom } from '../state/atoms/filters';
 import styled from 'styled-components';
+import { useAtom } from 'jotai';
 
 const StyledPriceContainer = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ const StyledTextboxContainer = styled.div`
 `;
 
 export const PriceFilter: React.FC = () => {
-  const [priceFilter, setPriceFilter] = useState<number[]>([1200, 7600]);
+  const [priceFilter, setPriceFilter] = useAtom<number[]>(priceFilterAtom);
 
   return (
     <StyledPriceContainer>

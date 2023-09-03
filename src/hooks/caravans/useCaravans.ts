@@ -1,10 +1,9 @@
-import { Caravan } from '../../types';
-import { caravanListAtom } from '../../state/atoms/caravans';
+import { caravansListAtom } from '../../state/atoms/caravans';
 import { useAtom } from 'jotai';
 import { useEffect } from 'react';
 
 export const useCaravans = () => {
-  const [caravans, setCaravans] = useAtom(caravanListAtom);
+  const [caravans, setCaravans] = useAtom(caravansListAtom);
 
   useEffect(() => {
     fetch('/api/data')
