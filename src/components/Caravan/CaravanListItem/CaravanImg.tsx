@@ -1,3 +1,4 @@
+import { CaravanListItemImgProps } from '../../../types';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -10,10 +11,6 @@ const StyledCaravanImg = styled.div`
   background-size: cover; // ensure that image covers the div without stretching
   background-position: center; // center image in the div
 `;
-
-type CaravanListItemImgProps = {
-  imgs: string[];
-};
 
 export const CaravanListItemImg: React.FC<CaravanListItemImgProps> = ({
   imgs,

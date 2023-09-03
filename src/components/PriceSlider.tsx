@@ -1,7 +1,7 @@
+import { PriceSliderProps, TrackProps } from '../types';
 import React, { useState } from 'react';
 
 import ReactSlider from 'react-slider';
-import { TrackProps } from '../types';
 import styled from 'styled-components';
 
 const SliderContainer = styled.div`
@@ -34,11 +34,6 @@ const StyledTrack = styled.div<TrackProps>`
     props.index === 1 ? props.theme.colors.green : props.theme.colors.beige};
   height: 4px;
 `;
-
-type PriceSliderProps = {
-  price: number[];
-  setPrice: (value: number[]) => void;
-};
 
 export const PriceSlider: React.FC<PriceSliderProps> = ({
   price,

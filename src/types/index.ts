@@ -37,3 +37,29 @@ export type Caravan = {
 export type CaravaListItemProps = {
   caravan: Caravan;
 };
+
+export type PriceSliderProps = {
+  price: number[];
+  setPrice: (value: number[]) => void;
+};
+
+export type CaravanDetailsProps = {
+  location: string;
+  passengersCapacity: number;
+  sleepingCapacity: number;
+  toilet: boolean;
+  shower: boolean;
+};
+
+export type CaravanListItemImgProps = {
+  imgs: string[];
+};
+
+export type CaravanPriceProps = {
+  price: number;
+  instantBookable: boolean;
+};
+
+export type VehicleTypeProps = {
+  vehicleType: string;
+};

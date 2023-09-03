@@ -1,3 +1,4 @@
+import { CaravanPriceProps } from '../../../types';
 import { FilterLabel } from '../../FilterLabel';
 import { NumericFormat } from 'react-number-format';
 import React from 'react';
@@ -27,11 +28,6 @@ const StyledIcon = styled.img`
   width: 16px;
   margin-left: 16px;
 `;
-
-type CaravanPriceProps = {
-  price: number;
-  instantBookable: boolean;
-};
 
 export const CaravanPrice: React.FC<CaravanPriceProps> = ({
   price,

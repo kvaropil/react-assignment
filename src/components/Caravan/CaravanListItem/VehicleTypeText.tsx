@@ -1,4 +1,5 @@
 import React from 'react';
+import { VehicleTypeProps } from '../../../types';
 import styled from 'styled-components';
 import { translateVehicleType } from '../../../utils/vehicleTypeTranslate';
 
@@ -14,10 +15,6 @@ const StyledVehicleType = styled.span`
   text-align: left;
   text-transform: uppercase;
 `;
-
-type VehicleTypeProps = {
-  vehicleType: string;
-};
 
 export const VehicleType: React.FC<VehicleTypeProps> = ({ vehicleType }) => {
   return (

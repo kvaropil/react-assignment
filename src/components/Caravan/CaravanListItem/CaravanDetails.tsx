@@ -1,3 +1,4 @@
+import { CaravanDetailsProps } from '../../../types';
 import IconBed from '../../../assets/icons/Icon-Bed.svg';
 import IconPerson from '../../../assets/icons/Icon-Person.svg';
 import IconShower from '../../../assets/icons/Icon-Shower.svg';
@@ -51,14 +52,6 @@ const StyledIconAdditionalText = styled.span`
   font-size: 14px;
   margin-left: 4px;
 `;
-
-type CaravanDetailsProps = {
-  location: string;
-  passengersCapacity: number;
-  sleepingCapacity: number;
-  toilet: boolean;
-  shower: boolean;
-};
 
 export const CaravanDetails: React.FC<CaravanDetailsProps> = ({
   location,
