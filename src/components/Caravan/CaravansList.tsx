@@ -1,7 +1,10 @@
 import { CaravanListItem } from './CaravanListItem/CaravanListItem';
 import React from 'react';
+import { Spinner } from '../common/Spinner';
 import styled from 'styled-components';
 import { useCaravans } from '../../hooks/caravans/useCaravans';
+import { useFetchingStatus } from '../../hooks/common/useFetchingState';
+import { useFilteredCaravans } from '../../hooks/caravans/useFilteredCaravans';
 
 const StyledCaravansList = styled.div`
   display: flex;
@@ -12,11 +15,17 @@ const StyledCaravansList = styled.div`
 `;
 
 export const CaravansList: React.FC = () => {
-  const caravans = useCaravans().slice(0, 6);
-  return (
+  const { fetchingStatus } = useFetchingStatus();
+  const caravans = useCaravans();
+
+  const filteredCaravans = useFilteredCaravans().slice(0, 6);
+  return fetchingStatus.status === 'loading' ? (
+    <Spinner />
+  ) : (
     <StyledCaravansList>
-      {caravans.map((caravan) => {
-        return <CaravanListItem key={caravan.name} caravan={caravan} />;
+      {filteredCaravans.map((caravan) => {
+        // eslint-disable-next-line react/jsx-key
+        return <CaravanListItem caravan={caravan} />;
       })}
     </StyledCaravansList>
   );

@@ -15,11 +15,19 @@ export type TextboxProps = {
 export type TypeFilterCardProps = {
   heading: string;
   text: string;
+  isSelected: boolean;
+  onClick: () => void;
 };
 
 export type StyledTypeCardContainerProps = {
   isSelected: boolean;
 };
+
+export type VehicleTypeEnum =
+  | 'BuiltIn'
+  | 'Alcove'
+  | 'Campervan'
+  | 'Intergrated';
 
 export type Caravan = {
   location: string;
@@ -28,7 +36,7 @@ export type Caravan = {
   passengersCapacity: number;
   sleepCapacity: number;
   price: number;
-  vehicleType: string;
+  vehicleType: VehicleTypeEnum;
   toilet: boolean;
   shower: boolean;
   pictures: string[];
