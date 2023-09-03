@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
+import React from 'react';
 import expandMoreIcon from '../../assets/icons/expand_more_black_24dp.svg';
+import { instantBookableFilterAtom } from '../../state/atoms/instantBookableFilter';
+import { useAtom } from 'jotai';
 import { useSelect } from 'downshift';
 
 const slideDown = keyframes`
@@ -73,7 +75,9 @@ const dropdownSelectorChoices = [
 ];
 
 export const DropdownFilter: React.FC = () => {
-  const [dropdownFilterValue, setDropdownFilterValue] = useState<boolean>(true);
+  const [dropdownFilterValue, setDropdownFilterValue] = useAtom(
+    instantBookableFilterAtom,
+  );
   const {
     isOpen,
     selectedItem,

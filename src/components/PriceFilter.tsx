@@ -2,7 +2,7 @@ import { FilterLabel } from './FilterLabel';
 import { PriceSlider } from './PriceSlider';
 import React from 'react';
 import { TextboxPrice } from './common/TextboxPrice';
-import { priceFilterAtom } from '../state/atoms/filters';
+import { priceFilterAtom } from '../state/atoms/priceFilter';
 import styled from 'styled-components';
 import { useAtom } from 'jotai';
 
