@@ -1,8 +1,8 @@
 import { atom } from 'jotai';
 import { caravansListAtom } from './caravans';
-import { instantBookableFilterAtom } from './instantBookableFilter';
-import { priceFilterAtom } from './priceFilter';
-import { vehicleTypeFilterAtom } from './vehicleTypeFilter';
+import { instantBookableFilterAtom } from './filters/instantBookableFilter';
+import { priceFilterAtom } from './filters/priceFilter';
+import { vehicleTypeFilterAtom } from './filters/vehicleTypeFilter';
 
 export const filteredCaravansAtom = atom((get) => {
   const caravans = get(caravansListAtom);

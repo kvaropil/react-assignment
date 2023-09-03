@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 import React from 'react';
 import expandMoreIcon from '../../assets/icons/expand_more_black_24dp.svg';
-import { instantBookableFilterAtom } from '../../state/atoms/instantBookableFilter';
+import { instantBookableFilterAtom } from '../../state/atoms/filters/instantBookableFilter';
 import { useAtom } from 'jotai';
 import { useSelect } from 'downshift';
 

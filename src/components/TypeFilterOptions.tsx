@@ -4,7 +4,7 @@ import { TypeFilterCard } from './TypeFilterCard';
 import { VehicleTypeEnum } from '../types';
 import styled from 'styled-components';
 import { useAtom } from 'jotai';
-import { vehicleTypeFilterAtom } from '../state/atoms/vehicleTypeFilter';
+import { vehicleTypeFilterAtom } from '../state/atoms/filters/vehicleTypeFilter';
 
 const StyledTypeOption = styled.div`
   height: 88px;
