@@ -2,6 +2,7 @@ import { CaravaListItemProps, Caravan } from '../../../types';
 
 import { CaravanDetails } from './CaravanDetails';
 import { CaravanListItemImg } from './CaravanImg';
+import { CaravanPrice } from './CaravanPrice';
 import React from 'react';
 import { VehicleType } from './VehicleTypeText';
 import styled from 'styled-components';
@@ -23,8 +24,8 @@ const StyledCaravanListItemWrapper = styled.div`
 `;
 
 const StyledCaravanNameHeading = styled.h2`
-  color: ${(props) => props.theme.colors.darkBlue};
   border-bottom: 1px solid ${(props) => props.theme.colors.beige};
+  color: ${(props) => props.theme.colors.darkBlue};
   margin: 0 16px 5px 0px;
   padding: 4px 0 4px 0;
 `;
@@ -48,7 +49,10 @@ export const CaravanListItem: React.FC<CaravaListItemProps> = ({ caravan }) => {
           toilet={caravan.toilet}
           shower={caravan.shower}
         />
-        {/* Price  */}
+        <CaravanPrice
+          price={caravan.price}
+          instantBookable={caravan.instantBookable}
+        />
       </StyledDetailsWrappet>
     </StyledCaravanListItemWrapper>
   );
