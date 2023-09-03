@@ -34,8 +34,6 @@ export const CaravansList: React.FC = () => {
     console.log(visibleCount);
   };
 
-  const caravans = useCaravans();
-
   if (fetchingStatus.status === 'loading') {
     return <Spinner />;
   }
