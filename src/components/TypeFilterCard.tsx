@@ -41,15 +41,11 @@ const StyledTypeCardText = styled.p`
 export const TypeFilterCard: React.FC<TypeFilterCardProps> = ({
   heading,
   text,
+  isSelected,
+  onClick,
 }) => {
-  const [isSelected, setIsSelected] = useState<boolean>(false);
-
-  const handleOnClick = () => {
-    setIsSelected(!isSelected);
-  };
-
   return (
-    <StyledTypeCardContainer isSelected={isSelected} onClick={handleOnClick}>
+    <StyledTypeCardContainer isSelected={isSelected} onClick={onClick}>
       <StyledTypeCardHeading>{heading}</StyledTypeCardHeading>
       <StyledTypeCardText>{ReactHtmlParse(text)}</StyledTypeCardText>
     </StyledTypeCardContainer>
