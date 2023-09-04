@@ -1,7 +1,7 @@
 import styled, { ThemeProvider } from 'styled-components';
 
 import { CaravansList } from '../src/components/Caravan/CaravansList';
-import { Filters } from '../src/components/Filters';
+import { Filters } from '../src/components/Filters/Filters';
 import { Header } from '../src/components/Header';
 import { Provider } from 'jotai';
 import { theme } from '../styles/theme';

@@ -1,4 +1,4 @@
-import { PriceLabelProps } from '../types';
+import { PriceLabelProps } from '../../types';
 import React from 'react';
 import styled from 'styled-components';
 

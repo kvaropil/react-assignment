@@ -1,7 +1,7 @@
-import { DropdownFilter } from './common/DropdownFilter';
+import { DropdownFilter } from '../common/DropdownFilter';
 import { FilterLabel } from './FilterLabel';
 import React from 'react';
-import actionIcon from '../assets/icons/actionFilter.svg';
+import actionIcon from '../../assets/icons/actionFilter.svg';
 import styled from 'styled-components';
 
 const StyledInstantReservationFilterWrapper = styled.div`

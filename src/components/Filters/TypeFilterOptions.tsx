@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import { TypeFilterCard } from './TypeFilterCard';
-import { VehicleTypeEnum } from '../types';
+import { VehicleTypeEnum } from '../../types';
 import styled from 'styled-components';
 import { useAtom } from 'jotai';
-import { vehicleTypeFilterAtom } from '../state/atoms/filters/vehicleTypeFilter';
+import { vehicleTypeFilterAtom } from '../../state/atoms/filters/vehicleTypeFilter';
 
 const StyledTypeOptions = styled.div`
   display: flex;
