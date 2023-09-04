@@ -16,6 +16,14 @@ const StyledPriceContainer = styled.div`
   padding-bottom: 24px;
   padding-right: 24px;
   border-right: 1px solid ${(props) => props.theme.colors.beige};
+
+  @media (max-width: ${(props) => props.theme.mobileBreakpoint}) {
+    padding-left: 16px;
+    border-right: 0;
+    border-bottom: 1px solid ${(props) => props.theme.colors.beige};
+    width: 100%;
+    margin-left: 0;
+  }
 `;
 
 const StyledTextboxContainer = styled.div`

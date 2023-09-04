@@ -14,6 +14,12 @@ const StyledCaravansList = styled.div`
   margin: 0 100px 0 100px;
   padding-top: 32px;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.mobileBreakpoint}) {
+    flex-direction: column;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 `;
 
 const StyledLoadMoreButtonWrapper = styled.div`

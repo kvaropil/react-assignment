@@ -7,4 +7,5 @@ export const theme = {
     darkGrey: '#9C8C8C',
     green: '#119383',
   },
+  mobileBreakpoint: '400px',
 };

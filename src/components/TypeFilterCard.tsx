@@ -16,6 +16,10 @@ const StyledTypeCardContainer = styled.div<StyledTypeCardContainerProps>`
       props.isSelected ? props.theme.colors.green : props.theme.colors.beige};
   padding-top: ${(props) => (props.isSelected ? '10px' : '11px')};
   padding-left: ${(props) => (props.isSelected ? '11px' : '12px')};
+
+  @media (max-width: ${(props) => props.theme.mobileBreakpoint}) {
+    margin-bottom: 16px;
+  }
 `;
 
 const StyledTypeCardHeading = styled.h2`
