@@ -4,8 +4,13 @@ import { TextboxProps } from '../../types';
 import styled from 'styled-components';
 
 const TextboxWrapper = styled.div`
+  margin-right: 16px;
   position: relative;
   width: 156px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 `;
 
 const StyledTextbox = styled(NumericFormat)`
