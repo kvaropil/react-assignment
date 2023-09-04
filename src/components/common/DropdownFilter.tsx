@@ -17,12 +17,12 @@ const slideDown = keyframes`
   }
 `;
 
-const DropdownContainer = styled.div`
+const StyledDropdownContainer = styled.div`
   position: relative;
   width: 176px;
 `;
 
-const DropdownButton = styled.button`
+const StyledDropdownButton = styled.button`
   background-color: ${(props) => props.theme.colors.white};
   border: 1px solid ${(props) => props.theme.colors.beige};
   color: ${(props) => props.theme.colors.darkBlue};
@@ -38,7 +38,7 @@ const DropdownButton = styled.button`
   width: 100%;
 `;
 
-const DropdownMenu = styled.ul`
+const StyledDropdownMenu = styled.ul`
   background-color: ${(props) => props.theme.colors.white};
   border: 1px solid ${(props) => props.theme.colors.beige};
 
@@ -54,12 +54,12 @@ const DropdownMenu = styled.ul`
   z-index: 10;
 `;
 
-const DropdownIcon = styled.img`
+const StyledDropdownIcon = styled.img`
   height: 24px;
   width: 24px;
 `;
 
-const DropdownItem = styled.li`
+const StyledDropdownItem = styled.li`
   cursor: pointer;
   padding: 10px 15px;
 
@@ -95,10 +95,10 @@ export const DropdownFilter: React.FC = () => {
   });
 
   return (
-    <DropdownContainer>
-      <DropdownButton {...getToggleButtonProps()}>
+    <StyledDropdownContainer>
+      <StyledDropdownButton {...getToggleButtonProps()}>
         {selectedItem ? selectedItem.label : null}
-        <DropdownIcon
+        <StyledDropdownIcon
           src={expandMoreIcon.src}
           alt='Expand'
           style={{
@@ -106,17 +106,17 @@ export const DropdownFilter: React.FC = () => {
             transition: 'transform 0.3s',
           }}
         />
-      </DropdownButton>
-      <DropdownMenu
+      </StyledDropdownButton>
+      <StyledDropdownMenu
         {...getMenuProps()}
         style={{ display: isOpen ? 'block' : 'none' }}
       >
         {dropdownSelectorChoices.map((item, index) => (
-          <DropdownItem key={index} {...getItemProps({ item, index })}>
+          <StyledDropdownItem key={index} {...getItemProps({ item, index })}>
             {item.label}
-          </DropdownItem>
+          </StyledDropdownItem>
         ))}
-      </DropdownMenu>
-    </DropdownContainer>
+      </StyledDropdownMenu>
+    </StyledDropdownContainer>
   );
 };

@@ -1,8 +1,8 @@
-import { PriceLabelProps } from '../types';
+import { PriceLabelProps } from '../../types';
 import React from 'react';
 import styled from 'styled-components';
 
-const Label = styled.label`
+const StyledLabel = styled.label`
   color: ${(props) => props.theme.colors.darkGrey};
   font-size: 16px;
   text-align: left;
@@ -20,9 +20,9 @@ export const FilterLabel: React.FC<PriceLabelProps> = ({
   iconSrc,
 }) => {
   return (
-    <Label>
+    <StyledLabel>
       {children}
       {iconSrc ? <StyledIcon src={iconSrc} /> : null}
-    </Label>
+    </StyledLabel>
   );
 };

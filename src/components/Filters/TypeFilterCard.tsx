@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { StyledTypeCardContainerProps, TypeFilterCardProps } from '../types';
+import { StyledTypeCardContainerProps, TypeFilterCardProps } from '../../types';
 
+import React from 'react';
 import ReactHtmlParse from 'react-html-parser';
 import styled from 'styled-components';
 

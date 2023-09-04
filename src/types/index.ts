@@ -72,3 +72,7 @@ export type CaravanPriceProps = {
 export type VehicleTypeProps = {
   vehicleType: string;
 };
+
+export type ButtonProps = {
+  onClick?: () => void;
+};

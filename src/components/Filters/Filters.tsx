@@ -4,7 +4,7 @@ import React from 'react';
 import { TypeFilter } from './TypeFilter';
 import styled from 'styled-components';
 
-const FiltersWrapper = styled.div`
+const StyledFiltersWrapper = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.beige};
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,7 @@ const FiltersWrapper = styled.div`
   }
 `;
 
-const TypesSection = styled.div`
+const StyledTypesSection = styled.div`
   flex: 5;
   border-right: 1px solid ${(props) => props.theme.colors.beige};
   display: flex;
@@ -32,7 +32,7 @@ const TypesSection = styled.div`
   }
 `;
 
-const ReservationSection = styled.div`
+const StyledReservationSection = styled.div`
   flex: 3;
   padding-left: 16px;
   display: flex;
@@ -45,14 +45,14 @@ const ReservationSection = styled.div`
 
 export const Filters: React.FC = () => {
   return (
-    <FiltersWrapper>
+    <StyledFiltersWrapper>
       <PriceFilter />
-      <TypesSection>
+      <StyledTypesSection>
         <TypeFilter />
-      </TypesSection>
-      <ReservationSection>
+      </StyledTypesSection>
+      <StyledReservationSection>
         <InstantReservationFilter />
-      </ReservationSection>
-    </FiltersWrapper>
+      </StyledReservationSection>
+    </StyledFiltersWrapper>
   );
 };

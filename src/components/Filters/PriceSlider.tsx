@@ -1,6 +1,6 @@
-import { PriceSliderProps, TrackProps } from '../types';
-import React, { useEffect, useState } from 'react';
+import { PriceSliderProps, TrackProps } from '../../types';
 
+import React from 'react';
 import ReactSlider from 'react-slider';
 import styled from 'styled-components';
 

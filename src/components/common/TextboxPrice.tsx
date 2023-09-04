@@ -26,7 +26,7 @@ const StyledTextbox = styled(NumericFormat)`
   width: 100%;
 `;
 
-const Suffix = styled.span`
+const StyledSuffix = styled.span`
   color: ${(props) => props.theme.colors.darkGrey};
 
   font-size: 16px;
@@ -59,7 +59,7 @@ export const TextboxPrice: React.FC<TextboxProps> = ({ value, onChange }) => {
         thousandSeparator={' '}
         onChange={handlePriceChange}
       />
-      <Suffix>Kč</Suffix>
+      <StyledSuffix>Kč</StyledSuffix>
     </TextboxWrapper>
   );
 };

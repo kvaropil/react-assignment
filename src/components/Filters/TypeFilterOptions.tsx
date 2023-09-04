@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 
 import { TypeFilterCard } from './TypeFilterCard';
-import { VehicleTypeEnum } from '../types';
+import { VehicleTypeEnum } from '../../types';
 import styled from 'styled-components';
 import { useAtom } from 'jotai';
-import { vehicleTypeFilterAtom } from '../state/atoms/filters/vehicleTypeFilter';
-
-const StyledTypeOption = styled.div`
-  height: 88px;
-  width: 156px;
-  background-color: red;
-  margin-right: 16px;
-`;
+import { vehicleTypeFilterAtom } from '../../state/atoms/filters/vehicleTypeFilter';
 
 const StyledTypeOptions = styled.div`
   display: flex;

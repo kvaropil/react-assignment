@@ -1,8 +1,8 @@
 import { FilterLabel } from './FilterLabel';
 import { PriceSlider } from './PriceSlider';
 import React from 'react';
-import { TextboxPrice } from './common/TextboxPrice';
-import { priceFilterAtom } from '../state/atoms/filters/priceFilter';
+import { TextboxPrice } from '../common/TextboxPrice';
+import { priceFilterAtom } from '../../state/atoms/filters/priceFilter';
 import styled from 'styled-components';
 import { useAtom } from 'jotai';
 
@@ -50,7 +50,6 @@ export const PriceFilter: React.FC = () => {
       <FilterLabel>Cena za den</FilterLabel>
       <PriceSlider price={priceFilter} setPrice={setPriceFilter} />
       <StyledTextboxContainer>
-        {/* TODO: two way data binding for textboxes. Currently can be changed only via slider */}
         <TextboxPrice
           value={priceFilter[0]}
           onChange={handleTextboxPriceChange(0)}

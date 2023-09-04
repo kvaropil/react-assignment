@@ -1,5 +1,5 @@
 import { CaravanPriceProps } from '../../../types';
-import { FilterLabel } from '../../FilterLabel';
+import { FilterLabel } from '../../Filters/FilterLabel';
 import { NumericFormat } from 'react-number-format';
 import React from 'react';
 import actionIcon from '../../../assets/icons/actionFilter.svg';
