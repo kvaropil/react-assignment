@@ -1,3 +1,4 @@
+import { ButtonProps } from '../../types';
 import React from 'react';
 import { darken } from 'polished';
 import styled from 'styled-components';
@@ -24,10 +25,6 @@ const StyledButton = styled.button`
     background-color: ${(props) => darken(0.1, props.theme.colors.green)};
   }
 `;
-
-type ButtonProps = {
-  onClick?: () => void;
-};
 
 export const Button: React.FC<ButtonProps> = ({ onClick, children }) => {
   return <StyledButton onClick={onClick}>{children}</StyledButton>;
