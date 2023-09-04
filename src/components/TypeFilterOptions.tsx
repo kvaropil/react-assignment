@@ -6,13 +6,6 @@ import styled from 'styled-components';
 import { useAtom } from 'jotai';
 import { vehicleTypeFilterAtom } from '../state/atoms/filters/vehicleTypeFilter';
 
-const StyledTypeOption = styled.div`
-  height: 88px;
-  width: 156px;
-  background-color: red;
-  margin-right: 16px;
-`;
-
 const StyledTypeOptions = styled.div`
   display: flex;
   justify-content: space-evenly;

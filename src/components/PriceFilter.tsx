@@ -50,7 +50,6 @@ export const PriceFilter: React.FC = () => {
       <FilterLabel>Cena za den</FilterLabel>
       <PriceSlider price={priceFilter} setPrice={setPriceFilter} />
       <StyledTextboxContainer>
-        {/* TODO: two way data binding for textboxes. Currently can be changed only via slider */}
         <TextboxPrice
           value={priceFilter[0]}
           onChange={handleTextboxPriceChange(0)}

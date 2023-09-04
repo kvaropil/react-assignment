@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SpinnerWrapper = styled.div`
+const StyledSpinnerWrapper = styled.div`
   margin: 50px auto;
   border: 16px solid ${(props) => props.theme.colors.beige};
   border-top: 16px solid ${(props) => props.theme.colors.green};
@@ -21,5 +21,5 @@ const SpinnerWrapper = styled.div`
 `;
 
 export const Spinner: React.FC = () => {
-  return <SpinnerWrapper />;
+  return <StyledSpinnerWrapper />;
 };
