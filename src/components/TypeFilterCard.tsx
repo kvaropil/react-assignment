@@ -5,6 +5,7 @@ import ReactHtmlParse from 'react-html-parser';
 import styled from 'styled-components';
 
 const StyledTypeCardContainer = styled.div<StyledTypeCardContainerProps>`
+  cursor: pointer;
   height: ${88 + 4}px;
   width: 156px;
   margin-right: 16px;

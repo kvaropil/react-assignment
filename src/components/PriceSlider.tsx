@@ -1,5 +1,5 @@
 import { PriceSliderProps, TrackProps } from '../types';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import ReactSlider from 'react-slider';
 import styled from 'styled-components';
@@ -39,10 +39,7 @@ export const PriceSlider: React.FC<PriceSliderProps> = ({
   price,
   setPrice,
 }) => {
-  const handlePriceChange = (
-    value: number | readonly number[],
-    index: number,
-  ) => {
+  const handlePriceChange = (value: number | readonly number[]) => {
     if (Array.isArray(value)) {
       setPrice(value);
     }
@@ -53,7 +50,7 @@ export const PriceSlider: React.FC<PriceSliderProps> = ({
       <StyledReactSlider
         ariaLabel={['Minimal price', 'Maximal price']}
         ariaValuetext={(state) => `Price value ${state.valueNow}`}
-        defaultValue={price}
+        value={price}
         max={10000}
         min={100}
         onChange={handlePriceChange}

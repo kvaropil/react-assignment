@@ -10,6 +10,7 @@ export type PriceLabelProps = {
 
 export type TextboxProps = {
   value: number;
+  onChange?: (value: number) => void;
 };
 
 export type TypeFilterCardProps = {
