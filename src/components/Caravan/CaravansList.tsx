@@ -4,7 +4,6 @@ import { Button } from '../common/Button';
 import { CaravanListItem } from './CaravanListItem/CaravanListItem';
 import { Spinner } from '../common/Spinner';
 import styled from 'styled-components';
-import { useCaravans } from '../../hooks/caravans/useCaravans';
 import { useFetchingStatus } from '../../hooks/common/useFetchingState';
 import { useFilteredCaravans } from '../../hooks/caravans/useFilteredCaravans';
 
@@ -48,8 +47,11 @@ export const CaravansList: React.FC = () => {
     <>
       <StyledCaravansList>
         {displayedCaravans.map((caravan) => (
-          // eslint-disable-next-line react/jsx-key
-          <CaravanListItem caravan={caravan} />
+          <CaravanListItem
+            // since no id (or other identifier provided) hackish way has to take place
+            key={`${caravan.location}${caravan.name}${caravan.vehicleType}${caravan.pictures[0]}`}
+            caravan={caravan}
+          />
         ))}
       </StyledCaravansList>
       <StyledLoadMoreButtonWrapper>
