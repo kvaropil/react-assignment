@@ -34,7 +34,16 @@ const StyledTextboxContainer = styled.div`
 `;
 
 export const PriceFilter: React.FC = () => {
-  const [priceFilter, setPriceFilter] = useAtom<number[]>(priceFilterAtom);
+  const [priceFilter, setPriceFilter]: [
+    number[],
+    (newValue: number[]) => void,
+  ] = useAtom(priceFilterAtom);
+
+  const handleTextboxPriceChange = (index: number) => (value: number) => {
+    const newPrices = [...priceFilter];
+    newPrices[index] = value;
+    setPriceFilter(newPrices);
+  };
 
   return (
     <StyledPriceContainer>
@@ -42,8 +51,14 @@ export const PriceFilter: React.FC = () => {
       <PriceSlider price={priceFilter} setPrice={setPriceFilter} />
       <StyledTextboxContainer>
         {/* TODO: two way data binding for textboxes. Currently can be changed only via slider */}
-        <TextboxPrice value={priceFilter[0]} />
-        <TextboxPrice value={priceFilter[1]} />
+        <TextboxPrice
+          value={priceFilter[0]}
+          onChange={handleTextboxPriceChange(0)}
+        />
+        <TextboxPrice
+          value={priceFilter[1]}
+          onChange={handleTextboxPriceChange(1)}
+        />
       </StyledTextboxContainer>
     </StyledPriceContainer>
   );

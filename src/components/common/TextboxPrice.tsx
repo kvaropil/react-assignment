@@ -1,6 +1,8 @@
+import React, { ChangeEvent, useCallback } from 'react';
+
 import { NumericFormat } from 'react-number-format';
-import React from 'react';
 import { TextboxProps } from '../../types';
+import debounce from 'lodash.debounce';
 import styled from 'styled-components';
 
 const TextboxWrapper = styled.div`
@@ -34,8 +36,20 @@ const Suffix = styled.span`
   transform: translateY(-50%);
 `;
 
-export const TextboxPrice: React.FC<TextboxProps> = ({ value }) => {
-  // TODO: get rid of readonly, implement two-way data binding
+export const TextboxPrice: React.FC<TextboxProps> = ({ value, onChange }) => {
+  // Debounce ensure that price in textfield won't change immediatelly
+  // as user type, but fire an event after 0.5s
+  const debouncedFunction = debounce((newValue: number) => {
+    onChange && onChange(newValue);
+  }, 500);
+
+  const handlePriceChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      const newValue = parseFloat(event.target.value.replace(/\s+/g, ''));
+      debouncedFunction(newValue);
+    },
+    [debouncedFunction],
+  );
 
   return (
     <TextboxWrapper>
@@ -43,7 +57,7 @@ export const TextboxPrice: React.FC<TextboxProps> = ({ value }) => {
         value={value}
         displayType={'input'}
         thousandSeparator={' '}
-        readOnly
+        onChange={handlePriceChange}
       />
       <Suffix>Kč</Suffix>
     </TextboxWrapper>
