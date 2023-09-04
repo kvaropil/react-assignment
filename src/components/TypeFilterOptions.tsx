@@ -16,6 +16,10 @@ const StyledTypeOption = styled.div`
 const StyledTypeOptions = styled.div`
   display: flex;
   justify-content: space-evenly;
+
+  @media (max-width: ${(props) => props.theme.mobileBreakpoint}) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const TypeFilterOptions: React.FC = () => {

@@ -11,5 +11,6 @@ declare module 'styled-components' {
       darkGrey: string;
       green: string;
     };
+    mobileBreakpoint: string;
   }
 }

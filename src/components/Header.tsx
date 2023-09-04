@@ -7,6 +7,11 @@ const HeaderWrapper = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.beige};
   height: 80px;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.mobileBreakpoint}) {
+    border-bottom: 1px solid ${(props) => props.theme.colors.beige};
+    width: 100%;
+  }
 `;
 
 const Logo = styled.img`
@@ -15,6 +20,13 @@ const Logo = styled.img`
   margin-left: 100px;
   margin-top: 22px;
   width: 201px;
+
+  @media (max-width: ${(props) => props.theme.mobileBreakpoint}) {
+    align-items: center;
+    margin: 0;
+    margin-top: 22px;
+    width: 100%;
+  }
 `;
 
 export const Header = () => {

@@ -4,6 +4,10 @@ body {
   padding: 0;
   margin: 0 auto;
   font-family: Roboto, sans-serif;
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 }
 
 a {

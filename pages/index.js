@@ -26,6 +26,10 @@ const PageWrapper = styled.div`
   justify-content: center;
   width: 100%;
   /* background-color: pink; */
+
+  @media (max-width: ${(props) => props.theme.mobileBreakpoint}) {
+    width: 100%;
+  }
 `;
 
 export default Home;
